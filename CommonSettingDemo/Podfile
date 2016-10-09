@@ -1,0 +1,6 @@
+target ‘CommonSettingDemo’ do
+
+pod ‘AFNetworking’
+pod ’Masonry’
+
+end

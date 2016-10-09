@@ -1,0 +1,51 @@
+//
+//  CommonSettingDemo.pch
+//  CommonSettingDemo
+//
+//  Created by Meng Fan on 16/9/5.
+//  Copyright © 2016年 Meng Fan. All rights reserved.
+//
+
+#ifndef CommonSettingDemo_pch
+#define CommonSettingDemo_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+// Screen
+#define SCREEN_SIZE                 [[UIScreen mainScreen] bounds].size
+#define SCREEN_WIDTH                [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT               [[UIScreen mainScreen] bounds].size.height
+
+//color
+#define DARK_BACKGROUND  [UIColor colorWithPatternImage:[UIImage imageNamed:@"tableview"]]
+#define LIGHT_BACKGROUND [UIColor colorWithRed:250.0/255.0 green:250.0/255.0 blue:250.0/255.0 alpha:1.0]
+#define RGBACOLOR(r,g,b,a) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:(a)]
+
+// App
+#define APP_VERSION [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+// System Version
+#define IOS_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+
+
+//全局应用
+#define MyApp ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+//友盟统计 -- 用户
+#define UMENG_APPKEY @"51b43bdf56240b6ef4009a3d"
+
+//推广渠道ID:AppStore, 91, Weiphone
+#define APP_CHANNELID @"AppStore"
+
+//判断是否为iPhone5
+#define iPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+//判断是否为iOS7
+#define iOS7 ((floor(NSFoundationVersionNumber) > NSFoundationVersionNumber_iOS_6_1))
+
+
+
+
+
+#endif /* CommonSettingDemo_pch */
