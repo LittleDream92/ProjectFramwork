@@ -1,0 +1,6 @@
+target ‘GaiBan’ do
+
+pod 'Mantle'
+pod ‘Masonry’
+
+end
